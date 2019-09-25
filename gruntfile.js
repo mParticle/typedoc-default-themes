@@ -71,6 +71,15 @@ module.exports = function(grunt)
                     dest: 'bin/default/assets/css',
                     ext: '.css'
                 }]
+            },
+            themeMp: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/mptheme/assets/css',
+                    src: '**/*.sass',
+                    dest: 'bin/mptheme/assets/css',
+                    ext: '.css'
+                }]
             }
         },
         autoprefixer: {
@@ -78,6 +87,11 @@ module.exports = function(grunt)
                 cascade: false
             },
             themeDefault: {
+                expand: true,
+                src: 'bin/**/*.css',
+                dest: './'
+            },
+            themeMp: {
                 expand: true,
                 src: 'bin/**/*.css',
                 dest: './'
@@ -114,6 +128,14 @@ module.exports = function(grunt)
                     cwd: 'src/minimal',
                     src: ['**/*.hbs'],
                     dest: 'bin/minimal'
+                }]
+            },
+            themeMp: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/mptheme',
+                    src: ['**/*.hbs', '**/*.png'],
+                    dest: 'bin/mptheme'
                 }]
             }
         },

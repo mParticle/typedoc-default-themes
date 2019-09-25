@@ -7,7 +7,6 @@
 node_modules
 npm-debug.log
 etc
-bin
 src/default/assets/js/main.js
 src/default/assets/js/main.js.map
 typedoc-default-themes-*.tgz
